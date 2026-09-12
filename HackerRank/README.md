@@ -30,7 +30,6 @@
     - Cần $O(N)$ bộ nhớ cho mảng `vector<Message> message_` để lưu trữ toàn bộ các gói tin trước khi in ra.
 
   - **Bug / Ghi chú:**
-    - 
     - `bool operator<(const Message& other) const` : **Nập chồng toán tử (Operator Overloading)**. Dạy các hàm chuẩn của C++ (như `std::sort`) cách so sánh 2 đối tượng (object) do người dùng tự định nghĩa.
     - **Tính đống gói (Encapsulation):** Đặt các biến `text_` và `id_` ở phạm vi `private` để giấu kín dữ liệu, không cho phép bên ngoài sửa đổi trực tiếp mà phải thông qua các hàm được cấp phép.
     - **Factory Pattern (Mẫu thiết kế):** Sử dụng `MessageFactory` làm nhà máy sản xuất gói tin. Nhà máy này tự động quản lý biến đếm `current_id_` và âm thầm đóng dấu ID vào từng `Message` sinh ra.
