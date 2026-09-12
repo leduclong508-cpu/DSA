@@ -1,6 +1,7 @@
 /*
-    12/09/2026 - Le Duc Long 
+    Le Duc Long 
     Topic: Variable Sized Arrays
+    12/09/2026: first edition
 */
 
 #include <cstdio>
