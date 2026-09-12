@@ -3,7 +3,8 @@
 
 ---
 
-## Ngày 1: Variable Sized Arrays
+##    Ngày 1: 
+##  Variable Sized Arrays
 - **Link đề bài:** [HackerRank - Variable Sized Arrays](https://www.hackerrank.com/challenges/variable-sized-arrays/problem)
 
 - **Độ phức tạp:**
@@ -17,7 +18,7 @@
   - `vector<vector<int>> a(n);` : Khai báo mảng 2 chiều động, số lượng hàng là $n$.
   - `a[i].resize(k);` : Cấp phát độ dài $k$ cho hàng thứ $i$ để tối ưu bộ nhớ thay vì dùng ma trận vuông.
 
-  ## Ngày 1: Variable Sized Arrays
+##  Variable Sized Arrays
 - **Link đề bài:** [HackerRank - Messages Order](https://www.hackerrank.com/challenges/messages-order/problem?isFullScreen=true)
 
 - **Độ phức tạp:**
