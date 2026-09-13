@@ -19,5 +19,9 @@ Kho lưu trữ này là nơi tôi ghi chép lại hành trình rèn luyện tư 
 *   Nắm vững các thư viện chuẩn (STL) của C++ (Vector, Map, Set,...).
 *   Rèn luyện tư duy thuật toán tối ưu, xây dựng nền tảng lập trình vững chắc phục vụ cho định hướng Kỹ thuật Phần cứng và Hệ thống Nhúng.
 
+## 📄 Tài liệu
+*   **link:** 
+    tài liệu 500 bài code[github](https://github.com/bollwarm/DataStructuresAlgorithms?fbclid=IwcGRvZgVleHRuA2FlbQIxMABicmlkETFSY045dHBLbTA4NXR1UlRFc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHr35oPCW1QnQpqpvW4lxgOBjZTS4IzWSldkl6hg-0UTp1lLTjvYobEBJeHsp_aem_qToIuCpe8AazzjgaqmnsSA)
+
 ---
 *Được duy trì và phát triển bởi Lê Đức Long.* 🚀
