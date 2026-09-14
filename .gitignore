@@ -1,2 +1,24 @@
+# Trình biên dịch C/C++ sinh ra
+*.o
+*.obj
 *.out
 *.exe
+*.app
+*.gch
+*.pch
+
+# Thư mục build và file nhị phân
+bin/
+build/
+obj/
+
+# Hệ điều hành sinh ra (Windows/macOS)
+Thumbs.db
+ehthumbs.db
+.DS_Store
+.Trashes
+
+# VS Code (Bỏ theo dõi bộ nhớ tạm và lịch sử cục bộ)
+.vscode/ipch/
+.vscode/.db
+*.code-workspace
