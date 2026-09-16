@@ -81,27 +81,34 @@ void swap(int* a, int* b) {
     *b = temp;
 }
 
-void partition(int arr[], int low, int high) {
-    int pivot = arr[high];
-    int i = low -1;
-
-    for(int j = low; int j < high; j++) {
+int partition(int arr[], int low, int high) {
+    int pivot = arr[high]; // The pivot is placed at the end of the array
+    
+    // 'i' is the boundary of the "smaller elements" zone. Initialized outside the array.
+    int i = low - 1; 
+    
+    for(int j = low; j < high; j++) {
+        // 'j' probes forward to find elements smaller than or equal to the pivot
         if(arr[j] <= pivot) {
-            i++;
-            swap(&arr[i], &arr[j]);
+            i++; // Expand the boundary
+            swap(&arr[i], &arr[j]); // Move the smaller element to the front
         }
     }
 
-    swap(&arr[i + 1], &arr[high]);;
+    // Place the pivot in its correct middle position (dividing the array)
+    swap(&arr[i + 1], &arr[high]);
+
+    // Report the pivot's exact index back to the recursive function
     return i + 1;
 }
 
 void quickSort(int arr[], int low, int high) {
     if(low < high) {
+        // Partition the array and get the index of the boundary of values
         int pi = partition(arr, low, high);
 
-        quickSort(arr, low, pi - 1);
-        quickSort(arr, pi + 1, high);
+        quickSort(arr, low, pi - 1); // Recursively sort the left sub-array
+        quickSort(arr, pi + 1, high); // Recursively sort the right sub-array
     }
 }
 void findPair(int arr[], int n, int sum) {
