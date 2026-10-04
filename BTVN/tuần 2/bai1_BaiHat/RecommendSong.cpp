@@ -8,7 +8,7 @@
     Finishing 
 */ 
 
-//#include<stdio.h>
+#include<iostream>
 #include<unordered_map>
 #include<string>
 #include<unordered_set>
@@ -42,6 +42,7 @@ class Song{
         string author;
         Genre genre;
 
+        Song(){}
         Song(int id, const string& title, const string& author, Genre genre)
             : id(id), title(title), author(author), genre(genre) {}
 };
@@ -57,6 +58,7 @@ class User{
         unordered_set<int> viewedSongs;
         unordered_set<int> downloadedSongs;
 
+        User(){}
         User(int id, const string& name): userID(id), name(name) {}
 
         void viewSong(int songID) {
@@ -74,7 +76,7 @@ class User{
             downloadedSongs.insert(songID);
         }
 
-        bool hasViewdSong(int songID) {
+        bool hasViewdSong(int songID) const {
             return viewedSongs.find(songID) != viewedSongs.end();
         }
 };
@@ -104,7 +106,42 @@ class MusicPlatform{
         }
 
         User& getUser(int id){
+            return users[id];
+        }
 
+        void recommendedSongs(int target_user_id){
+            if(users.find(target_user_id) == users.end()){
+                return; // User not found
+            }
+
+            const User& target_user = users[target_user_id];
+            const int benchmark_similarity = 4; // Define a threshold for similarity
+            
+            unordered_set<int> recommendedSongIDs;
+
+            for(const auto& [other_id, other_user] : users){
+                if(other_id == target_user_id) continue; // Skip the target user
+
+                int similarity = calculateSimilarity(target_user, other_user);
+                if(similarity >= benchmark_similarity){
+                    for(const auto& [songID, weight] : other_user.interactions){
+                        if(!target_user.hasViewdSong(songID)){
+                            recommendedSongIDs.insert(songID);
+                        }
+                    }
+                }
+            }
+
+            if(recommendedSongIDs.empty()){
+                cout << "No recommendations available for user " << target_user.name << endl;
+                return; // No recommendations available
+            }
+
+            cout << "Recommended songs for user " << target_user.name << ":" << endl;
+            for(int songID : recommendedSongIDs){
+                const Song& song = songs[songID];
+                cout << "Song ID: " << song.id << ", Title: " << song.title << endl;
+            }
         }
 };
 
@@ -121,4 +158,28 @@ int main(){
     app.addUser(2, "Dung");
     app.addUser(3, "Minh");
 
+    // Dũng tương tác
+    app.getUser(2).viewSong(101);
+    app.getUser(2).likeSong(101);
+    app.getUser(2).viewSong(103);
+    app.getUser(2).likeSong(103);
+    app.getUser(2).downloadSong(103);
+    app.getUser(1).viewSong(105);
+    app.getUser(1).likeSong(105);
+
+    // Long tương tác giống Dũng nhưng thích thêm bài 103
+    app.getUser(1).viewSong(101);
+    app.getUser(1).likeSong(101);
+    app.getUser(1).likeSong(103);
+
+
+    // Minh tương tác với bài 102 và 104
+    app.getUser(3).viewSong(102);
+    app.getUser(3).likeSong(102);
+    app.getUser(3).viewSong(104);
+    app.getUser(3).likeSong(104);
+    app.getUser(3).downloadSong(104);
+
+    // Chạy đề xuất cho Dũng
+    app.recommendedSongs(2);
 }

@@ -19,11 +19,28 @@ void solveCoinChange(vector<int>& coins, int S){
 
     for(int i = 1; i <= S; i++){
         for(int coin : coins){
+            // Check if the weight of the coin is less than or equal to the current amount i
             if(i >= coin && dp[i - coin] + 1 < dp[i]){
-                
+                dp[i] = dp[i - coin] + 1;
+                trace[i] = coin;
             }
         }
     }
+    
+    if(dp[S] > S){
+        return; // No solution exists
+    }
+
+    unordered_map<int, int> cointCount;
+    int currentAmount = S;
+
+    while(currentAmount > 0){
+        int used_coint = trace[currentAmount];
+        cointCount[used_coint]++; 
+        currentAmount -= used_coint;
+    }
+
+    
 };
 
 int main(){
