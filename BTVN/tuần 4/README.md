@@ -76,16 +76,3 @@ Bảng dưới đây liệt kê các kịch bản kiểm thử đã được th�
 | **TC_05** | `-5` | `0` | Edge Case | ✅ Pass | Chặn thành công các giá trị âm không hợp lệ. |
 | **TC_06** | `31` | `2147483647` | Boundary | ✅ Pass | Chạm ngưỡng giới hạn lưu trữ tối đa của kiểu `int` 32-bit có dấu. |
 | **TC_07** | `32` | Tràn số / Lỗi | Stress Test | ⚠️ Known Bug | Gây tràn bộ nhớ (Integer Overflow), kết quả bị đảo thành số âm. Yêu cầu nâng cấp kiểu dữ liệu nếu cần xử lý lượng đĩa lớn hơn. |
-
----
-
-## 🛠️ Hướng dẫn Biên dịch và Cài đặt (Build & Run)
-
-Sử dụng `gcc` (hoặc `g++`) trong môi trường terminal (Linux/WSL) để biên dịch:
-
-```bash
-# 1. Biên dịch mã nguồn
-gcc recursive_hanoi_tower.cpp -o hanoi_calc
-
-# 2. Chạy file thực thi
-./hanoi_calc
