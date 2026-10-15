@@ -24,7 +24,7 @@ void merge(int arr[], int left, int mid, int right){
     // Checking the condition and sort the elements
     while(i < n1 && j < n2){
         if(L[i] <= R[j]){
-            arr[k] = L[i];
+            arr[k] = L[i]; // Overriding the elements in the original array with the sorted elements
             i++;
         }
         else{
@@ -34,7 +34,7 @@ void merge(int arr[], int left, int mid, int right){
         k++;
     }
 
-    // Filling the remaining elements
+    // Filling the remaining elements after filling the sorted elements in the array
     while(i < n1){
         arr[k] = L[i];
         i++;
@@ -48,6 +48,7 @@ void merge(int arr[], int left, int mid, int right){
     }
 }
 
+// Function to divine and merge the array
 void separate(int arr[], int left, int right, int n){
     if(left < right){
         int mid = (left + right) / 2;
@@ -62,6 +63,7 @@ void separate(int arr[], int left, int right, int n){
     }
 }
 
+// Function to initiate the merge sort
 void mergeSort(int arr[], int n){
     separate(arr, 0, n - 1, n);
 }
