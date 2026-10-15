@@ -8,12 +8,14 @@ void swap(int *a, int *b){
     *b = temp;
 }
 
+//
 int partition(int arr[], int low, int high, int n){
     int pivot = arr[low];
     int i = low + 1;
     int j = high;
-    
+
     while(i <= j){
+        // Check the condition and swap the elements accordinglyqq
         while(i <= high && arr[i] <= pivot) i++;
         while(j > low && arr[j] > pivot) j--;
 
