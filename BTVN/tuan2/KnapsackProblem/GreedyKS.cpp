@@ -1,5 +1,10 @@
-// Finding the most amount of calories in a knapsack with a weight limit
-// Specifically, in 1000 Kg
+/*
+ Finding the most amount of calories in a knapsack with a weight limit
+ Specifically, in 1000 Kg
+ Using greedy algorithm to solve, arrange according to the ratio of calo to weight
+if the goods can be divined into smaller parts 
+*/ 
+
 
 #include <iostream>
 #include <vector>
@@ -48,13 +53,13 @@ void knapsack(vector<Food>& foods, double weightLimit){
 
 int main(){
     vector<Food> foods = {
-        {"Peanut butter", 20, 117800, 5890},
-        {"Rice", 300, 1122000, 3740},
-        {"Wheat flour", 400, 1444000, 3610},
-        {"Strawberry jam", 50, 130000, 2600},
-        {"Beans (can)", 300, 690000, 2300},
-        {"Potatoes", 800, 1501600, 1877},
-        {"Tomatoes (can)", 300, 237000, 790}
+        {"Peanut butter", 20, 117800},
+        {"Rice", 300, 112200},
+        {"Wheat flour", 400, 1444000},
+        {"Strawberry jam", 50, 130000},
+        {"Beans (can)", 300, 690000,},
+        {"Potatoes", 800, 1501600},
+        {"Tomatoes (can)", 300, 237000}
     };
 
     double weightLimit = 1000; // in Kg
