@@ -4,9 +4,12 @@ Kho lưu trữ này là nơi tôi ghi chép lại hành trình rèn luyện tư 
 
 ## 📂 Cấu trúc dự án
 
-*   📁 **`HackerRank/`**: Chứa các lời giải cho các bài toán trên nền tảng HackerRank.
+    *   📁 **`BTVN/`**: Bài tập theo tuần (quy hoạch động, sắp xếp, đệ quy,...).
+    *   📁 **`HackerRank/`**: Lời giải các bài trên nền tảng HackerRank.
+    *   📁 **`code-thieu-nhi/`**: Các bài luyện tập cơ bản C/C++.
+    *   📁 **`personal-project/`**: Mini projects thực hành tư duy thuật toán.
     *   Ngôn ngữ sử dụng chủ yếu: **C/C++**.
-    *   Các bài giải được chú trọng vào việc phân tích độ phức tạp (Time/Space Complexity) và tối ưu hóa bộ nhớ.
+    *   Các bài giải tập trung vào phân tích độ phức tạp (Time/Space Complexity) và tối ưu bộ nhớ.
 
 ## 🛠️ Môi trường phát triển
 

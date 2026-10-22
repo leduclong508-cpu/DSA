@@ -6,11 +6,13 @@
 *.app
 *.gch
 *.pch
+a.out
 
 # Thư mục build và file nhị phân
 bin/
 build/
 obj/
+*.dSYM/
 
 # Hệ điều hành sinh ra (Windows/macOS)
 Thumbs.db
@@ -22,3 +24,8 @@ ehthumbs.db
 .vscode/ipch/
 .vscode/.db
 *.code-workspace
+
+# Binary outputs accidentally created in source folders
+BvP
+finalUp
+numberGuessingGame
