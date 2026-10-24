@@ -5,7 +5,7 @@ void moveZerosToEnd(int arr[], int n){
 
     for(int i = 0; i < n; i++){
         if(arr[i] != 0){
-            arr[count] = A[i];
+            arr[count] = arr[i];
             count++;
         }
     }
