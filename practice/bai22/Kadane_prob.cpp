@@ -30,3 +30,12 @@ void kadane(int arr[], int n){
     }
     cout << endl << "With sum: " << max_sum << endl;
 }
+
+int main(){
+    int arr[] = {-2, -3, 4, -1, -2, 1, 5, -3};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    kadane(arr, n);
+
+    return 0;
+}
