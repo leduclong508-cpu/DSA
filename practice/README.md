@@ -13,7 +13,7 @@ Kho lưu trữ mã nguồn và tài liệu giải thuật chuyên sâu về cấ
 | Thư mục | Tên bài toán | Tệp mã nguồn | Phương pháp giải thuật | Time | Space | Trạng thái |
 | :--- | :--- | :--- | :--- | :---: | :---: | :---: |
 | [bai1](https://github.com/leduclong508-cpu/DSA/tree/main/practice/bai1) | Find Pair with Given Sum | `find_pair_given_sum.cpp`[cite: 2] | Brute Force (Hai vòng lặp lồng) | $O(N^2)$ | $O(1)$ | Hoàn thành |
-| [bai2](https://github.com/leduclong508-cpu/DSA/tree/main/practice/bai2) | Subarray with 0 Sum Exists | `subarray_0_sum.cpp`[cite: 2] | Brute Force | $O(N^2)$ | Hoàn thành |
+| [bai2](https://github.com/leduclong508-cpu/DSA/tree/main/practice/bai2) | Subarray with 0 Sum Exists | `subarray_0_sum.cpp`[cite: 2] | Brute Force / Prefix Sum Check | $O(N^2)$ | $O(1)$ | Hoàn thành |
 | [bai4](https://github.com/leduclong508-cpu/DSA/tree/main/practice/bai4) | Sort Binary Array in Linear Time | `sort_binary_linear.cpp`[cite: 2] | Đếm số phần tử (Counting Approach) | $O(N)$ | $O(1)$ | Hoàn thành |
 | [bai5](https://github.com/leduclong508-cpu/DSA/tree/main/practice/bai5) | Find Duplicate in Limited Range | `dupli_element_in_range.cpp`[cite: 2] | Tổng toán học (Mathematical Sum) | $O(N)$ | $O(1)$ | Hoàn thành |
 | [bai9](https://github.com/leduclong508-cpu/DSA/tree/main/practice/bai9) | Dutch National Flag Problem | `Dutch_flag_prob.cpp`[cite: 2] | Counting Sort / Three Pointers | $O(N)$ | $O(1)$ | Hoàn thành |
