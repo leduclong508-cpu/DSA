@@ -173,24 +173,22 @@ int main(){
     insertBefore(&list, p, 9);
     hienThi(list);
  
-  /*
-  Node* list = NULL;
-  initList2(&list);
-  insertBegin2(&list, 1);
-  insertBegin2(&list, 2);
-  insertBegin2(&list, 3);
-  insertBegin2(&list, 4);
-  insertBegin2(&list, 5);
-  hienThi(list);
 
-  Node* list = initList3(list);
-  list = insertBegin3(list, 1);
-  list = insertBegin3(list, 2);
-  list = insertBegin3(list, 3);
-  list = insertBegin3(list, 4);
-  list = insertBegin3(list, 5);
-  hienThi(list);
-  */
- 
- 
+    // Node* list = NULL;
+    // initList2(&list);
+    // insertBegin2(&list, 1);
+    // insertBegin2(&list, 2);
+    // insertBegin2(&list, 3);
+    // insertBegin2(&list, 4);
+    // insertBegin2(&list, 5);
+    // hienThi(list);
+
+    // Node* list = initList3(list);
+    // list = insertBegin3(list, 1);
+    // list = insertBegin3(list, 2);
+    // list = insertBegin3(list, 3);
+    // list = insertBegin3(list, 4);
+    // list = insertBegin3(list, 5);
+    // hienThi(list);
+
 }

@@ -8,8 +8,11 @@ project(DSA_All_Projects)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# QUÉT ĐỆ QUY: Tìm TẤT CẢ các file .cpp trong thư mục dsa và các thư mục con
+# 1. Quét đệ quy tất cả file .cpp
 file(GLOB_RECURSE ALL_SOURCES "*.cpp")
+
+# 2. BỔ SUNG QUAN TRỌNG: Loại bỏ các file nằm trong thư mục build/ để tránh lỗi tự quét nhầm
+list(FILTER ALL_SOURCES EXCLUDE REGEX "${CMAKE_CURRENT_SOURCE_DIR}/build/.*")
 
 # Lặp qua từng file tìm được
 foreach(source IN LISTS ALL_SOURCES)
