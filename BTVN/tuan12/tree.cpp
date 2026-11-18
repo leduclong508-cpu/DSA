@@ -52,7 +52,7 @@ void freeTree(Node** root){
 }
 
 int calSum(Node* root){
-    if(root == NULL) return -1;
+    if(root == NULL) return 0;
     return root -> data + calSum(root -> lp) + calSum(root -> rp);
 }
 
